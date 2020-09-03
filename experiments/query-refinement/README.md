@@ -18,6 +18,10 @@ Before running our load tests, let's try our query and see the result.  In a bro
 
 http://localhost:4502/bin/querybuilder.json?path=/content/we-retail&property=jcr%3Acontent/image/fileReference&property.value=/content/dam/we-retail/en/products/apparel/pants/Trail.jpg
 
+Notice in the above query we define a property to match:
+
+```jcr:content/image/fileReference = /content/dam/we-retail/en/products/apparel/pants/Trail.jpg```
+
 The query should return 4 results:
 ``` json
 {
@@ -84,6 +88,12 @@ Our first test looked at all content under `/content/we-retail`, the root of our
 
 http://localhost:4502/bin/querybuilder.json?path=/content/we-retail/us/en/products&property=jcr%3Acontent/image/fileReference&property.value=/content/dam/we-retail/en/products/apparel/pants/Trail.jpg
 
+Notice in the above query we define a new path property to match:
+
+```path=/content/we-retail/us/en/products```
+
+in addition to our `fileReference` property defined in step 1.
+
 1. Again, we'll use the JMeter script included in this directory, and generate 500 requests with the new path:
 
 ```
@@ -102,6 +112,12 @@ A big improvement!  But let's try and do better...
 1. Since in this simulation, we are only interested in product pages being returned, lets also add a `type` property like so...
 
    http://localhost:4502/bin/querybuilder.json?path=/content/we-retail/us/en/products&type=cq%3APage&property=jcr%3Acontent/image/fileReference&property.value=/content/dam/we-retail/en/products/apparel/pants/Trail.jpg
+   
+Notice now in the above query we a `type` property as so:
+
+```type=cq:Page```
+
+in addition to our `path` and `fileReference` properties defined earlier.
 
 This allows AEM to use one of its built in indexes for type `cq:Page`
 ```
