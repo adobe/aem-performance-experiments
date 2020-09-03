@@ -10,7 +10,7 @@ Therefore, care should be taken to create queries with this in mind.  In this ex
 ## Setup
 We'll begin by installing some sample content consisting of 1500 nodes.  
 
-1. In a terminal, run the bash script called [searchcontent.sh](searchcontent.sh) found alongside this readme to create our nodes.
+1. In a terminal, run the bash script called [searchcontent.sh](searchcontent.sh) found alongside this readme to create our nodes.  *Windows Note:* Ensure you have cURL installed.  You may also have to fix End-of-Line markers.
 
 2. You should now see the sample content under http://localhost:4502/crx/de/index.jsp#/content/search-test
 
@@ -21,7 +21,11 @@ We'll begin by installing some sample content consisting of 1500 nodes.
 then select the Explain Query tab.
 
 2. Choose JCR-SQL2 from the query language selector and add the following query:
+
     `SELECT * from [nt:unstructured] where [jcr:path] like '/content/search-test/%' and id like '%9999%'`
+    
+    The above query will search for all unstructured nodes where the path begins with `/content/search-test/` and has an id property containing `9999`.  In this example all our nodes have an idea containing `9999`.
+    
 3. Ensure both "Include Execution Time" and "Include Node Count" are checked.  You should see the following...
     
     <img src="../img/explain-query-tool.png">
@@ -62,7 +66,7 @@ Indexes are typically created via an [oak index generator](https://helpx.adobe.c
 the needed node structure and property definitions.
 
 1. Navigate to package manager at http://localhost:4502/crx/packmgr/index.jsp
-2. Upload and install the [searchTestIndex.zip](searchTestIndex.zip) found alongside this readme.
+2. Upload and install the [searchTestIndex.zip](searchTestIndex.zip) found alongside this readme.  If needed, visit the [documentation](https://helpx.adobe.com/ca/experience-manager/6-3/sites/administering/using/package-manager.html#PackageManager) for info on using Package Manager.
 
 Let's take a look at what was just installed.  Navigate to http://localhost:4502/crx/de/index.jsp#/oak%3Aindex/searchTestIndex/
 You should see properties similar to below...
