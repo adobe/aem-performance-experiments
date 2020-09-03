@@ -77,7 +77,7 @@ Note the results that are printed to the console.
 Run:
 summary =    500 in 00:00:33 =   15.3/s Avg: 20526 Min:  8720 Max: 31958 Err:     0 (0.00%)
 ```
-That's not great.  With only 500 users we're seeing an avg response time of over 20 seconds per query.  Let's try and improve that.
+That's not great.  We're seeing an avg response time of over 20 seconds per query.  Let's try and improve that.
 ## Test #2: `Refine the content path`
 
 Our first test looked at all content under `/content/we-retail`, the root of our site.  But in this simulation we're only interested in products, so lets refine our path like so...
