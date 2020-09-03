@@ -16,6 +16,7 @@ You will need the following SDKs, tools, and apps installed to work through the 
 
 - Java `11.0.*`
 - [JMeter](https://jmeter.apache.org/)
+- [cURL](https://curl.haxx.se/)
 
 You will also need a local AEM author setup:
 
