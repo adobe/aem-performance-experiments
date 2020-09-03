@@ -4,7 +4,7 @@ This repository contains a collection of Search experiments in a take-home lab f
 
 ## Goal
 
-The goal of these experiments is to demonstrate the impact of search optimization and best practices adoption in Adobe Experience Manager (AEM), and provide a project for test driving its feature set.
+The goal of these experiments is to demonstrate the impact of search optimization and best practices adoption in Adobe Experience Manager (AEM).
 
 ## Non-Goals
 
@@ -26,9 +26,13 @@ You will also need a local AEM author setup:
 
 ## 1. `Performance gains of a Lucene property index`
 
+In this experiment, we examine the before and after effects of creating a custom Lucene property index.
+
 [⇨ Performance gains of a Lucene property index](experiments/lucene-property-index)
 
 ## 2. `Performance gains of simple query refinement`
+
+In this experiment, we'll take a vague search query and see the performance boost achieved by narrowing its search criteria.
 
 [⇨ Performance gains of a simple query refinement](experiments/query-refinement)
 
