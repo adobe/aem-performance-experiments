@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-for i in {1..150}
+for i in {1..1500}
 do
   echo $i
 
