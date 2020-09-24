@@ -4,4 +4,4 @@
     jcr:primaryType="cq:Component"
     jcr:title="Tabs"
     sling:resourceSuperType="core/wcm/components/tabs/v1/tabs"
-    componentGroup="My Site - Content"/>
+    componentGroup="Search Experiments - Content"/>

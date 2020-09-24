@@ -1,0 +1,40 @@
+p.overview, ul.overview {
+  font-size: small;
+}
+
+form#pagination-container {
+
+  div.cq-placeholder {
+    display: none;
+  }
+
+  > div {
+    min-width: 150px;
+
+    label {
+      font-weight: bold;
+      font-size: larger;
+    }
+
+    input[type=number] {
+      max-width: 80px;
+    }
+    input[name=searchPath] {
+      width: 95%;
+    }
+
+    textarea {
+      width: 95%;
+      height: 393px;
+      resize: vertical;
+    }
+
+    > div {
+      margin: 20px;
+    }
+
+    > button {
+      margin: 10px;
+    }
+  }
+}

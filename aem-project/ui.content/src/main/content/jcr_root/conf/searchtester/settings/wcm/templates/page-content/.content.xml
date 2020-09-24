@@ -5,7 +5,7 @@
         cq:lastModified="{Date}2019-12-02T17:37:24.544+01:00"
         cq:lastModifiedBy="admin"
         cq:templateType="/conf/searchtester/settings/wcm/template-types/page"
-        jcr:description="My Site Page Template"
+        jcr:description="Search Experiments Page Template"
         jcr:primaryType="cq:PageContent"
         jcr:title="Content Page"
         status="enabled"/>

@@ -15,8 +15,8 @@
 
   <artifactId>searchtester.dispatcher.cloud</artifactId>
   <packaging>pom</packaging>
-  <name>My Site - Dispatcher</name>
-  <description>HTTP &amp; Dispatcher configurations for My Site</description>
+  <name>Search Experiments - Dispatcher</name>
+  <description>HTTP &amp; Dispatcher configurations for Search Experiments</description>
 
 
   <build>

@@ -3,4 +3,4 @@
     jcr:primaryType="cq:Component"
     jcr:title="Title"
     sling:resourceSuperType="core/wcm/components/title/v2/title"
-    componentGroup="My Site - Content"/>
+    componentGroup="Search Experiments - Content"/>

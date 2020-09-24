@@ -24,8 +24,8 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>searchtester.core</artifactId>
-    <name>My Site - Core</name>
-    <description>Core bundle for My Site</description>
+    <name>Search Experiments - Core</name>
+    <description>Core bundle for Search Experiments</description>
     <build>
         <plugins>
             <plugin>

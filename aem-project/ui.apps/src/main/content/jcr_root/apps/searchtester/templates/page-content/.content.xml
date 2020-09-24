@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:description="Template with focus on content."
     jcr:primaryType="cq:Template"
-    jcr:title="My Site Content Page"
+    jcr:title="Search Experiments Content Page"
     allowedPaths="[/content/searchtester/.+]"
     ranking="{Long}100">
     <jcr:content

@@ -31,8 +31,8 @@
     <!-- P R O J E C T  D E S C R I P T I O N                                   -->
     <!-- ====================================================================== -->
     <artifactId>searchtester.it.tests</artifactId>
-    <name>My Site - Integration Tests Bundles</name>
-    <description>Bundles for Integration Tests for My Site</description>
+    <name>Search Experiments - Integration Tests Bundles</name>
+    <description>Bundles for Integration Tests for Search Experiments</description>
 
     <!-- <scm>
         <connection></connection>
@@ -58,7 +58,7 @@
                         </goals>
                         <configuration>
                             <bnd><![CDATA[
-Bundle-Category: My Site
+Bundle-Category: Search Experiments
 -exportcontents: ${packages;VERSIONED}
 -snapshot: ${tstamp;yyyyMMddHHmmssSSS}
 Bundle-DocURL:

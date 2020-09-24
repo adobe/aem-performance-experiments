@@ -29,8 +29,8 @@
     <!-- ====================================================================== -->
     <artifactId>searchtester.it.launcher</artifactId>
     <packaging>jar</packaging>
-    <name>My Site - Integration Tests Launcher</name>
-    <description>Integration Tests Launcher for My Site</description>
+    <name>Search Experiments - Integration Tests Launcher</name>
+    <description>Integration Tests Launcher for Search Experiments</description>
 
     <!-- <scm>
         <connection></connection>
