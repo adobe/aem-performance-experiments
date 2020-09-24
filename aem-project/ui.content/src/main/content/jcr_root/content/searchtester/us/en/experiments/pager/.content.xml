@@ -28,19 +28,7 @@
                     <overview
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="searchtester/components/text"
-                        text="&lt;p class=&quot;overview&quot;>Some details below can be unclear. Hopefully we clear up any confusion here with respect to pagination. Let's start with the fields:&lt;/p>
-&lt;p class=&quot;overview&quot;>&lt;b>p.limit&lt;/b>: &lt;/p>
-&lt;p class=&quot;overview&quot;>Set a positive value for the page size. Pick a size that is useful for a user, but not much more than that. Loading fewer large sets can produce a bad experience. Go for frequent small loads.&lt;/p>
-&lt;p class=&quot;overview&quot;>&lt;b>p.guessTotal&lt;/b>: &lt;/p>
-&lt;p class=&quot;overview&quot;>This is a little confusing. To learn the value in detail, see &lt;a href=&quot;https://github.com/adobe/aem-search-experiments&quot;>the guessTotal experiment&lt;/a>. Try -1 and see how long it takes and the exact total. Consider these values:&lt;/p>
-&lt;ul class=&quot;overview&quot;>
-&lt;li>false: complete the query and return the exact number of hits as &quot;total&quot; in the response. &quot;more&quot; in the response will be false.&lt;/li>
-&lt;li>true: only accumulate enough hits to satisfy &quot;p.limit&quot;. &quot;more&quot; in the response will be true only if there are more hits.&lt;/li>
-&lt;li>positive number: keep reading until there are that many hits, or the hits are exhausted. &quot;total&quot; will be the real total, or the number of hits encountered.&lt;/li>
-&lt;li>other number: the same as setting it to &quot;false&quot;&lt;/li>
-&lt;/ul>
-&lt;p class=&quot;overview&quot;>&lt;b>p.offset&lt;/b>&lt;/p>
-&lt;p class=&quot;overview&quot;>Specify where to start returning the hits within the set of hits. In pagination, it should be the number of items already returned.&lt;/p>"
+                        text="&lt;p class=&quot;overview&quot;>Please see explanation, tips, etc. on the &lt;a href=&quot;https://github.com/adobe/aem-search-experiments/tree/master/experiments/pagination&quot;>experiment site&lt;/a>.&lt;/p>"
                         textIsRich="true"/>
                     <separator
                         jcr:primaryType="nt:unstructured"
