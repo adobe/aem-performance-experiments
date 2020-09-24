@@ -21,7 +21,7 @@ You will need the following SDKs, tools, and apps installed to work through the 
 You will also need a local AEM author setup:
 
 - AEM 6.5 author instance running on `:4502`
-    - Ideally, with the latest [Service Pack](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/service-pack/sp-release-notes.html) installed
+  - Ideally, with the latest [Service Pack](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/service-pack/sp-release-notes.html) installed
 
 # Experiments
 
@@ -37,7 +37,18 @@ In this experiment, we'll take a vague search query and see the performance boos
 
 [⇨ Performance gains of a simple query refinement](experiments/query-refinement)
 
+## 3. `Performance gains for Query Builder queries with large result sets`
 
+In this experiment, we use [Query Builder's p.guessTotal](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/query-builder/querybuilder-predicate-reference.html#root) to improve query performance. 
+
+[⇨ Performance gains for large result sets](experiments/large-result-sets)
+
+## 4. `Large Result Sets on Optimized Queries`
+
+In this experiment, we consider what customers should do after their queries are optimized and they find their
+search still takes a long time, and returns a large set. 
+
+[⇨ Pagination](experiments/pagination)
 
 ### Contributing
 
