@@ -24,7 +24,8 @@
       return;
     }
     let guessTotalUpper = $guessTotal.val().toString().toUpperCase();
-    if (guessTotalUpper !== "TRUE" && guessTotalUpper !== "FALSE" && $.isNumeric(guessTotalUpper) === false) {
+    let isNumeric = !isNaN(parseFloat(guessTotalUpper)) && isFinite(parseFloat(guessTotalUpper));
+    if (guessTotalUpper !== "TRUE" && guessTotalUpper !== "FALSE" && isNumeric === false) {
       $guessTotal.val("true");
       return;
     }
@@ -55,16 +56,17 @@
               currentList += data.hits[i].path + "\n";
             }
             $results.val(currentList);
+
+            $offset.val(parseInt($offset.val().toString()) + pageSize);
+            if (guessTotalUpper !== "TRUE" && guessTotalUpper !== "FALSE" && parseInt(guessTotalUpper)> 0) {
+              $guessTotal.val(parseInt($offset.val().toString()) + pageSize);
+            }
           }
         })
         .fail(function(data, textStatus, errorThrown) {
           alert("Error occurred when executing the search.  Response: " + textStatus + " : " + errorThrown );
         });
 
-    $offset.val(parseInt($offset.val().toString()) + pageSize);
-    if (guessTotalUpper !== "TRUE" && guessTotalUpper !== "FALSE" && parseInt(guessTotalUpper)> 0) {
-      $guessTotal.val(parseInt($offset.val().toString()) + pageSize);
-    }
   }
 
   function handleReset() {

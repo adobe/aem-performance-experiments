@@ -10,13 +10,14 @@ and takes a long time to complete. Such a delay can be a bad experience for the 
 
 ## What the Experiment Does Not Teach You
 
-This experiment tries to show the power of Pagination and the use of [Querybuilder](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&query=p.limit%3D-1%0D%0Apath%3D%2Fcontent%0D%0Ap.offset%3D0%0D%0Ap.guessTotal)
+This experiment tries to show the power of Pagination and the use of [Querybuilder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)
 properties.
 
 It does not try to teach how to:
  * create a beautiful web page
- * script perfect JS/JQuery usage
- * how to optimize a search for best performance
+ * script perfect JS/JQuery
+ * optimize a search for best performance
+ * validate field values
 
 ## Setup
 
@@ -29,15 +30,15 @@ We'll begin by building and installing the package included in this project.
 
 1. Clone this Git repo to a local location
 1. Using a console, go to the `aem-project` folder located in the project root (created from the AEM Project Archetype).
-1. Build and install the package to your localhost's author instance by running `mvn -PautoInstallSinglePackage clean install`
+1. Successfully build and install the package to your localhost's author instance by running `mvn -PautoInstallSinglePackage clean install`
 1. Ensure that executes successfully
-1. To verify the installation, open the Pager page: http://localhost:4502/content/searchtester/us/en/experiments/pager.html
+1. To verify the installation, open Pager: http://localhost:4502/content/searchtester/us/en/experiments/pager.html
 
 ## Pager 
 
 On the [page](http://localhost:4502/content/searchtester/us/en/experiments/pager.html) you will see 4 fields which
 you may recognize as
-[Querybuilder](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&query=p.limit%3D-1%0D%0Apath%3D%2Fcontent%0D%0Ap.offset%3D0%0D%0Ap.guessTotal)
+[Querybuilder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)
 fields:
 
 * limit: Page Size
@@ -47,7 +48,7 @@ fields:
 
 After clicking _Load Page_, these fields will be updated, if required, in order to be ready for the next load.
 
-You will see 2 button:
+You will see 2 buttons:
 
 * Load Page: Use the fields' values to start a search of cq:Page items
 * Reset Fields: Reset all the values to their default values
@@ -59,7 +60,7 @@ You will see 2 textarea fields:
 
 ## Test #1: 
 
-1. Open the Pager page: http://localhost:4502/content/searchtester/us/en/experiments/pager.html
+1. Open Pager: http://localhost:4502/content/searchtester/us/en/experiments/pager.html
 1. Examine the fields (note the _Path_ is pointing to the pager location, to limit the number of hits)
 1. Click _Load Page_ button
 1. Examine the text area fields
@@ -68,7 +69,7 @@ You will see 2 textarea fields:
 
 ## Test #2:
 
-1. Open the Pager page: http://localhost:4502/content/searchtester/us/en/experiments/pager.html or
+1. Open Pager: http://localhost:4502/content/searchtester/us/en/experiments/pager.html or
 1. Click the _Clear Fields_ button
 1. Change the Path value to **"/content"** to work with a larger result set
 1. Click _Load Page_
@@ -84,6 +85,7 @@ You will see 2 textarea fields:
     * Change the _Limit_ to see different page sizes and notice what happens to the _Offset_ field after a load
     * Change the _guessTotal_ values to "true", "false", -1, 0, 1 and 10000 and check the _Details_ of that search
     * Open your browser's network tab and see the network traffic when the call is executed
+    * Use **"/content"** as the path for a larger search set
 
 
 ## Conclusion
