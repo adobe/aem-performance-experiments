@@ -31,7 +31,6 @@ We'll begin by building and installing the package included in this project.
 1. Clone this Git repo to a local location
 1. Using a console, go to the `aem-project` folder located in the project root (created from the AEM Project Archetype).
 1. Successfully build and install the package to your localhost's author instance by running `mvn -PautoInstallSinglePackage clean install`
-1. Ensure that executes successfully
 1. To verify the installation, open Pager: http://localhost:4502/content/searchtester/us/en/experiments/pager.html
 
 ## Pager 
