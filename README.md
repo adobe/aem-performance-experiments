@@ -46,7 +46,7 @@ In this experiment, we use [Query Builder's p.guessTotal](https://docs.adobe.com
 ## 4. `Large Result Sets on Optimized Queries`
 
 In this experiment, we consider what customers should do after their queries are optimized and they find their
-search still takes a long time, and returns a large set. 
+search still takes a long time and returns a large set. 
 
 [⇨ Pagination](experiments/pagination)
 
