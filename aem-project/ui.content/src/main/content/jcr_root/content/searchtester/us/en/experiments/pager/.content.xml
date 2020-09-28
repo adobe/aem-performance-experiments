@@ -28,7 +28,7 @@
                     <overview
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="searchtester/components/text"
-                        text="&lt;p class=&quot;overview&quot;>Please see explanation, tips, etc. on the &lt;a href=&quot;https://github.com/adobe/aem-search-experiments/tree/master/experiments/pagination&quot;>experiment site&lt;/a>.&lt;/p>"
+                        text="&lt;p class=&quot;overview&quot;>Please see explanation, tips, etc. on the &lt;a href=&quot;https://github.com/adobe/aem-search-experiments/tree/master/experiments/pagination&quot;>experiment site&lt;/a>.&lt;/p>&lt;p class=&quot;overview&quot;>Click to go to the parent &lt;a title=&quot;Search Experiments&quot; href=&quot;/content/searchtester/us/en/experiments.html&quot; target=&quot;_self&quot;>Search Experiments&lt;/a> page.&lt;/p>"
                         textIsRich="true"/>
                     <separator
                         jcr:primaryType="nt:unstructured"
