@@ -1,4 +1,4 @@
-# Use of Paging for large sets
+# Use of Paging for Large Sets
 
 This experiment demonstrates why pagination might provide a better experience with more immediate UI feedback and
 less taxing work for the backend to do.  It allows hands-on, immediate feedback on pagination fields.
@@ -16,8 +16,8 @@ This experiment tries to show aspects of Pagination such as:
 [Querybuilder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)
 properties
 
-_NOTE_: A customizer's search may include introduction of their own custom APIs, and not have the UI call
-Querybuilder directly.  That is fine, as this experiment simply tries to illustrate the principles of pagination. 
+_NOTE_: A customizer's search implementation may introduce their own custom APIs, effectively bypassing the
+QueryBuilder API.  That is fine, as this experiment simply tries to illustrate the principles of pagination. 
 
 ## Non-Goals
 It does not try to teach how to:
@@ -106,5 +106,5 @@ Examples of times when paging should be considered:
 * when migrating large sets of data, perhaps from a legacy database, and testing shows search queries are taking much longer
 
 Some more reading:
- * [Query Build API](https://docs.adobe.com/content/help/en/experience-manager-64/developing/platform/query-builder/querybuilder-api.html)
+ * [Query Build API](https://docs.adobe.com/content/help/en/experience-manager-64/developing/platform/query-builder/querybuilder-api.html#implementing-pagination)
  * [Query Class](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/Query.html)
