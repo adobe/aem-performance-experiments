@@ -39,37 +39,17 @@ We'll begin by building and installing the package included in this project.
 1. Successfully build and install the package to your localhost's author instance by running `mvn -PautoInstallSinglePackage clean install`
 1. To verify the installation, open Pager UI: http://localhost:4502/content/searchtester/us/en/experiments/pager.html
 
-## Pager 
-On the [page](http://localhost:4502/content/searchtester/us/en/experiments/pager.html) you will see 4 fields you may
-recognize as
-[Querybuilder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)
-fields:
-
-* limit: Page size
-* guessTotal: Whether to finish the full query to determine the total size (see the [Guess Total experiment](https://github.com/adobe/aem-search-experiments/tree/master/experiments/large-result-sets) for more information)
-* offset: Where to start extracting hits to return 
-* path: The base path where the search will begin
-
-After clicking _Load Page_, these fields will be updated, if required, in order to be ready for the next load.
-
-You will see 2 buttons:
-
-* Load Page: Use the fields' values to start a search of cq:Page items
-* Reset Fields: Reset all the values to their default values
-
-You will see 2 text area fields:
-
-* Results: The list of all the hits already returned with the most recent hits appended to the bottom. Scrolling to the bottom of the list will trigger the next load (i.e. infinite scroll).
-* Details: The details of the most recently executed search call including time duration, URL and the response.
+## Pager
 
 ## Test #1: `Introduction`
 1. Open Pager UI: http://localhost:4502/content/searchtester/us/en/experiments/pager.html
-1. Examine the fields (note the _Path_ is pointing to the pager UI content location, to limit the number of hits)
-1. Click _Load Page_ button 
-1. Examine how the input fields changed 
+1. Examine the fields (note the _Path_ is pointing to the Search Experiments content location, to limit the number of hits)
+1. Click _Load Page_ button to use the fields' values to start a search of cq:Page items
+1. Examine how the input fields changed to prepare for the loading of the next page
 1. Examine the text area fields
 1. Note the _Details_, especially the Duration, how the URL matches the field values and the response metadata
 1. Click the _Load Page_ again and see the _Result_ list grow, and see the _Details_ information refresh
+1. Scroll to the bottom of the _Results_ text area to load the next page (i.e. infinite scroll)
 
 This is a simple experiment to get familiar with the Pager UI and its fields and to notice the time it
 took to load small sets of the query results. 
