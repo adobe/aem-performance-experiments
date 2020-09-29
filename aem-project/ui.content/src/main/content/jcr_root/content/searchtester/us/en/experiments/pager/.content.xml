@@ -116,7 +116,7 @@
                             required="true"
                             rows="1"
                             type="text"
-                            value="/content/searchtester/us/en/experiments/pager">
+                            value="/content/searchtester">
                             <cq:responsive jcr:primaryType="nt:unstructured">
                                 <default
                                     jcr:primaryType="nt:unstructured"

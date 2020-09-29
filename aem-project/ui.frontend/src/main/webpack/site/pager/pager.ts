@@ -19,9 +19,11 @@
         "&p.guessTotal=" + $guessTotal.val());
     let start = new Date().getTime();
 
-    if (pageSize < 1) {
+    if (pageSize < -1) {
       $limit.val(10);
       return;
+    } else if (pageSize < 1) {
+      alert("NOTE: 'Limit' values of 0 or -1 can produce errors due to the large node recursion.")
     }
     let guessTotalUpper = $guessTotal.val().toString().toUpperCase();
     let isNumeric = !isNaN(parseFloat(guessTotalUpper)) && isFinite(parseFloat(guessTotalUpper));
@@ -71,7 +73,7 @@
 
   function handleReset() {
     $("input[name='limit']").val(10);
-    $("input[name='guessTotal']").val(11);
+    $("input[name='guessTotal']").val("true");
     $("input[name='offset']").val(0);
     $("textarea[name='details']").val("");
     $("textarea[name='results']").val("");
