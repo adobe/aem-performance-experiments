@@ -1,16 +1,16 @@
 # Use of Paging for large sets
 
-This experiment demonstrates why pagination might provide a better experience, and allows hands-on, immediate feedback
-on pagination fields.
+This experiment demonstrates why pagination might provide a better experience with more immediate UI feedback and
+less taxing work for the backend to do.  It allows hands-on, immediate feedback on pagination fields.
 
 ## Problem
-At some point, the optimal query has been created, using all the performance enhancements, but still produces a lot
-of hits and takes a long time to complete. Such a delay can be a bad experience for the user and uses a lot of 
-system resources. 
+At times, even after a query has been optimized for efficiency, it can take a long time to complete the search. Such a
+ delay can be a bad experience for the user and uses a lot of system resources. How can that be improved?
 
 ## Goals
-This experiment tries to show the power of Pagination and the use of [Querybuilder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)
-properties.  A customer’s search may include introduction of their own custom APIs, and not have the UI call
+This experiment tries to show the power of Pagination in combination with
+[Querybuilder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)
+properties.  A customizer's search may include introduction of their own custom APIs, and not have the UI call
 Querybuilder directly.  That is fine, as this experiment simply tries to illustrate the principles of pagination. 
 
 ## Non-Goals
@@ -19,7 +19,6 @@ It does not try to teach how to:
  * script perfect JS/JQuery
  * optimize a search for best performance
  * validate field values
- * etc.
 
 ## Setup
 Tools to Install:
@@ -30,19 +29,19 @@ _NOTE_: An author instance running on port 4502 is required for this experiment.
 We'll begin by building and installing the package included in this project.
 
 1. Clone this Git repo to a local location
-1. Using a console, go to the `aem-project` folder located in the project root (created from the AEM Project Archetype).
+1. In a console, navigate to the `aem-project` folder located in the project root (_created from the AEM Project Archetype_).
 1. Successfully build and install the package to your localhost's author instance by running `mvn -PautoInstallSinglePackage clean install`
-1. To verify the installation, open Pager: http://localhost:4502/content/searchtester/us/en/experiments/pager.html
+1. To verify the installation, open Pager UI: http://localhost:4502/content/searchtester/us/en/experiments/pager.html
 
 ## Pager 
-On the [page](http://localhost:4502/content/searchtester/us/en/experiments/pager.html) you will see 4 fields which
-you may recognize as
+On the [page](http://localhost:4502/content/searchtester/us/en/experiments/pager.html) you will see 4 fields you may
+recognize as
 [Querybuilder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)
 fields:
 
-* limit: Page Size
+* limit: Page size
 * guessTotal: Whether to finish the full query to determine the total size (see the [Guess Total experiment](https://github.com/adobe/aem-search-experiments/tree/master/experiments/large-result-sets) for more information)
-* offset: Where, in the result list, to start extracting hits to return 
+* offset: Where to start extracting hits to return 
 * path: The base path where the search will begin
 
 After clicking _Load Page_, these fields will be updated, if required, in order to be ready for the next load.
@@ -58,8 +57,8 @@ You will see 2 text area fields:
 * Details: The details of the most recently executed search call including time duration, URL and the response.
 
 ## Test #1: 
-1. Open Pager: http://localhost:4502/content/searchtester/us/en/experiments/pager.html
-1. Examine the fields (note the _Path_ is pointing to the pager location, to limit the number of hits)
+1. Open Pager UI: http://localhost:4502/content/searchtester/us/en/experiments/pager.html
+1. Examine the fields (note the _Path_ is pointing to the pager UI content location, to limit the number of hits)
 1. Click _Load Page_ button 
 1. Examine how the input fields changed 
 1. Examine the text area fields
@@ -67,7 +66,7 @@ You will see 2 text area fields:
 1. Click the _Load Page_ again and see the _Result_ list grow, and see the _Details_ information refresh
 
 ## Test #2:
-1. Open Pager: http://localhost:4502/content/searchtester/us/en/experiments/pager.html or click the _Clear Fields_
+1. Open Pager UI: http://localhost:4502/content/searchtester/us/en/experiments/pager.html or click the _Clear Fields_
 button if the page is already open
 1. Change the Path value to **"/content"** to work with a larger result set
 1. Click _Load Page_
@@ -77,7 +76,7 @@ button if the page is already open
 1. In _Details_, notice the Duration value is substantially larger (relatively) because the backend finished the search in order to find the exact total
 
 ## Test #3:
-1. Open the Pages page: http://localhost:4502/content/searchtester/us/en/experiments/pager.html or click the
+1. Open the Pager UI: http://localhost:4502/content/searchtester/us/en/experiments/pager.html or click the
 _Clear Fields_ button if the page is already open
 1. It is up to you.  Some ideas:
     * Change the _Limit_ to see different page sizes and notice what happens to the _Offset_ field after a load
