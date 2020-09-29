@@ -14,19 +14,19 @@ AEM's QueryBuilder debugger tool will be used to execute [QueryBuilder-based](ht
 
 1. Navigate to AEM's QueryBuilder debugger tool at: http://localhost:4502/libs/cq/search/content/querydebug.html.
 
-2. Find all items in the /content folder in the JCR by typing the following text in the text area:
+1. Find all items in the /content folder in the JCR by typing the following text in the text area:
 
 ```
    path=/content
 ```
 
-3. Select the `Search` button to execute the query.
+- Select the `Search` button to execute the query.
 
  <img src="../img/query-builder-debugger-exact-total.png">
 
-4. Make note of the total `Number of hits` and the `Time` it took the execute the query.
+- Make note of the total `Number of hits` and the `Time` it took the execute the query.
 
-Note, the query is not indexed to show the performance gain more easily.
+For demonstration purposes, the query is not indexed to show the performance gain more easily.
 
 ## Test #2: `Approximate the total`
 
@@ -43,7 +43,7 @@ Let's try this query again, but this time we'll specify a number to count up to 
 
 Now we see that 100 results were read "and more" exist. There is no exact number of hits, and the query performs faster. That's better!
 
-2. Run the same query again with `p.guessTotal` set to `true`:
+- Run the same query again with `p.guessTotal` set to `true`:
 
 ```
    path=/content
