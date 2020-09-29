@@ -61,9 +61,9 @@ took to load small sets of the query results.
 1. Dismiss the dialog warning about an error
 1. Note the _Details_, especially the Duration and total (57 or so)
 
-In this experiment the content tree of the _searchtester_ is searched with a simple query. These results can
-be extrapolated to realize the same search for a full site will have 10,000's of hits
-and with some imagination, if even possible to complete without errors, would be long and use up many server
+In this experiment the entire content tree of the _searchtester_ is searched with a simple query without any
+limitations. These results can be extrapolated to realize the same search for a full site will have 10,000's
+of hits and with some imagination, if even possible to complete without errors, would be long and use up many server
 resources.
 
 Recalling the "Test 1" experiment where the search results were loaded one page at a time, one can see how loading
