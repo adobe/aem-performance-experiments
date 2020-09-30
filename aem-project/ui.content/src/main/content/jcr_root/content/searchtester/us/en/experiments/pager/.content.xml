@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:contextHubPath="/etc/cloudsettings/default/contexthub"
+        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:lastModified="{Date}2020-09-17T15:12:05.622-04:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/searchtester/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Pager"
+        sling:resourceType="searchtester/components/page"
+        pageTitle="Search - Pagination Experiment">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="searchtester/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="searchtester/components/container">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="searchtester/components/title"/>
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="searchtester/components/container"
+                    layout="responsiveGrid">
+                    <overview
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="searchtester/components/text"
+                        text="&lt;p class=&quot;overview&quot;>Please see explanation, tips, etc. on the &lt;a href=&quot;https://github.com/adobe/aem-search-experiments/tree/master/experiments/pagination&quot;>experiment site&lt;/a>.&lt;/p>&lt;p class=&quot;overview&quot;>Click to go to the parent &lt;a title=&quot;Search Experiments&quot; href=&quot;/content/searchtester/us/en/experiments.html&quot; target=&quot;_self&quot;>Search Experiments&lt;/a> page.&lt;/p>"
+                        textIsRich="true"/>
+                    <separator
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="searchtester/components/separator"/>
+                    <container
+                        jcr:created="{Date}2020-09-17T14:59:28.102-04:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-09-17T14:59:28.102-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="searchtester/components/form/container"
+                        action="/content/usergenerated/searchtester/us/en/pager/cq-gen1600369168107/"
+                        actionType="foundation/components/form/actions/store"
+                        id="pagination-container">
+                        <limit
+                            jcr:created="{Date}2020-09-17T14:59:40.719-04:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2020-09-17T15:09:57.516-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="p.limit"
+                            sling:resourceType="searchtester/components/form/text"
+                            name="limit"
+                            required="true"
+                            rows="1"
+                            type="number"
+                            value="10">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="2"/>
+                            </cq:responsive>
+                        </limit>
+                        <guessTotal
+                            jcr:created="{Date}2020-09-17T15:01:29.515-04:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2020-09-17T15:07:10.083-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="p.guessTotal"
+                            sling:resourceType="searchtester/components/form/text"
+                            name="guessTotal"
+                            required="true"
+                            rows="1"
+                            type="text"
+                            value="true">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="4"/>
+                            </cq:responsive>
+                        </guessTotal>
+                        <offset
+                            jcr:created="{Date}2020-09-17T15:05:16.363-04:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2020-09-17T15:06:57.217-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="p.offset"
+                            sling:resourceType="searchtester/components/form/text"
+                            name="offset"
+                            readOnly="true"
+                            rows="1"
+                            type="number"
+                            value="0">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="3"/>
+                            </cq:responsive>
+                        </offset>
+                        <searchpath
+                            jcr:created="{Date}2020-09-17T15:05:16.363-04:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2020-09-17T15:06:57.217-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Search Path"
+                            sling:resourceType="searchtester/components/form/text"
+                            helpMessage="Specify which path to search.  Use '/content' for a large number of hits."
+                            name="searchPath"
+                            required="true"
+                            rows="1"
+                            type="text"
+                            value="/content/searchtester">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="9"/>
+                            </cq:responsive>
+                        </searchpath>
+                        <separator
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="searchtester/components/separator"/>
+                        <load
+                            jcr:created="{Date}2020-09-17T15:07:19.962-04:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2020-09-17T15:07:56.310-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Load Page"
+                            sling:resourceType="searchtester/components/form/button"
+                            name="load"
+                            type="button"
+                            value="load">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    behavior="newline"
+                                    offset="0"
+                                    width="1"/>
+                            </cq:responsive>
+                        </load>
+                        <reset
+                            jcr:created="{Date}2020-09-17T15:08:02.626-04:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2020-09-17T15:08:20.921-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Reset Fields"
+                            sling:resourceType="searchtester/components/form/button"
+                            name="reset"
+                            type="button"
+                            value="reset">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="1"/>
+                            </cq:responsive>
+                        </reset>
+                        <results
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Results"
+                            sling:resourceType="searchtester/components/form/text"
+                            helpMessage="The concatenated list of search results, with infinite scroll."
+                            name="results"
+                            readOnly="true"
+                            rows="50"
+                            type="textarea"
+                            value="">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    behavior="newline"
+                                    offset="0"
+                                    width="6"/>
+                            </cq:responsive>
+                        </results>
+                        <details
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Details"
+                                sling:resourceType="searchtester/components/form/text"
+                                helpMessage="The details of the last search call."
+                                name="details"
+                                readOnly="true"
+                                rows="50"
+                                type="textarea"
+                                value="">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="6"/>
+                            </cq:responsive>
+                        </details>
+                    </container>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>
