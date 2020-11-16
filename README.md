@@ -1,14 +1,14 @@
-# AEM 6.5 Search Experiments
+# AEM 6.5 Performance Experiments
 
-This repository contains a collection of Search experiments in a take-home lab format. The content is intended for intermediate to advanced AEM developers and customizers.
+This repository contains a collection of experiments in a take-home lab format designed to highlight the performance impact of some AEM best practices. The content is intended for intermediate to advanced AEM developers and customizers.
 
 ## Goal
 
-The goal of these experiments is to demonstrate the impact of search optimization and best practices adoption in Adobe Experience Manager (AEM).
+The goal of these experiments is to demonstrate the impact of best practices adoption in Adobe Experience Manager (AEM).
 
 ## Non-Goals
 
-This repo does not attempt to prescribe a one-size-fits-all solution to search optimization. Due to the myriad use cases that AEM supports, it would be impossible to do so. Instead, pick and choose concepts from the below experiments and try them out on your project.
+This repo does not attempt to prescribe a one-size-fits-all solution to optimize AEM performance. Due to the myriad use cases that AEM supports, it would be impossible to do so. Instead, pick and choose concepts from the below experiments and try them out on your project.
 
 ## Getting set up
 
