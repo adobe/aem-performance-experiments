@@ -15,6 +15,8 @@ This repo does not attempt to prescribe a one-size-fits-all solution to optimize
 You will need the following SDKs, tools, and apps installed to work through the experiments:
 
 - Java `11.0.*`
+- Maven `3.6.*`
+- Node `10.15.*`
 - [JMeter](https://jmeter.apache.org/)
 - [cURL](https://curl.haxx.se/)
 
@@ -22,6 +24,11 @@ You will also need a local AEM author setup:
 
 - AEM 6.5 author instance running on `:4502`
   - Ideally, with the latest [Service Pack](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/service-pack/sp-release-notes.html) installed
+
+### NOTE
+
+Under no circumstances should this code by installed on a production instance. It is for illustration
+purposes only and should be removed once the user has completed their investigation.
 
 # Experiments
 
@@ -49,6 +56,16 @@ In this experiment, we consider what customizers should do after their queries a
 search still takes a long time and returns a large set. 
 
 [⇨ Pagination](experiments/pagination)
+
+## 5. Performance Impact of Changing `Session Save Frequency`
+
+In this experiment, we consider how often the JCR session should be saved when performing many modifications to it.
+How often should a 'save' be done?  After every write?  Every 10 writes?  Only at the end?  Try out the
+experiment and determine for yourself.
+
+_Spoiler: Less is more!_
+
+[⇨ Performance Impact of Changing JCR Session Save Frequency](experiments/session-save-frequency)
 
 ### Contributing
 

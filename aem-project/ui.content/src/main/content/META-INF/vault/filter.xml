@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
     <filter root="/conf/searchtester" mode="merge"/>
+    <filter root="/conf/aem-session-experiments" mode="merge"/>
+    <filter root="/conf/global/settings/granite/operations/monitoring/charts/session_information" mode="merge"/>
     <filter root="/content/searchtester" mode="merge"/>
     <filter root="/content/dam/searchtester" mode="merge"/>
     <filter root="/content/experience-fragments/searchtester" mode="merge"/>
+    <filter root="/content/aem-session-experiments" mode="merge"/>
+    <filter root="/content/dam/aem-session-experiments" mode="merge"/>
+    <filter root="/content/experience-fragments/aem-session-experiments" mode="merge"/>
 </workspaceFilter>

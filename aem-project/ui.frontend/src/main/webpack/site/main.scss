@@ -1,7 +1,7 @@
 
 @import 'variables';
 @import 'base';
-@import './components/*.scss';
-@import './site/pager/*.scss';
+@import '../components/*.scss';
+@import './styles/experiencefragment_footer';
 @import './pager/*.scss';
-@import 'src/main/webpack/site/styles/experiencefragment_footer';
+@import './sessiontester/*.scss';
