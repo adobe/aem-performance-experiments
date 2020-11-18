@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/aem-session-experiments/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Session Write Tester"
+        jcr:uuid="fed2d796-4266-42d4-b887-801c907d24c9"
+        sling:resourceType="aem-session-experiments/components/page"
+        title="Session Write Tester">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="aem-session-experiments/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aem-session-experiments/components/container">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-session-experiments/components/title"/>
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-session-experiments/components/container"
+                    layout="responsiveGrid">
+                    <overview
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aem-session-experiments/components/text"
+                        text="&lt;p class=&quot;overview&quot;>Modify the inputs to test how often to save session changes. Go to the Administrator &lt;a title=&quot;Monitoring&quot; href=&quot;/libs/granite/operations/content/monitoring/page.html&quot; target=&quot;_blank&quot;>Monitoring Page&lt;/a> to see Session information.&lt;/p>"
+                        textIsRich="true"/>
+                    <separator
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aem-session-experiments/components/separator"/>
+                    <container
+                        jcr:created="{Date}2020-09-17T14:59:28.102-04:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-09-17T14:59:28.102-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aem-session-experiments/components/container"
+                        id="session-main-container">
+                        <fieldscontainer
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-session-experiments/components/form/container"
+                            id="session-form-container">
+                            <writes
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="JCR Modifications to perform:"
+                                sling:resourceType="aem-session-experiments/components/form/text"
+                                name="writes"
+                                required="{Boolean}true"
+                                rows="1"
+                                type="number"
+                                value="5000">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="5"/>
+                                </cq:responsive>
+                            </writes>
+                            <every
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="JCR Modifications per commit:"
+                                sling:resourceType="aem-session-experiments/components/form/text"
+                                name="every"
+                                required="{Boolean}true"
+                                rows="1"
+                                type="number"
+                                value="10">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        behavior="newline"
+                                        offset="0"
+                                        width="5"/>
+                                </cq:responsive>
+                            </every>
+                            <copynode
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Create a node for the write action"
+                                sling:resourceType="aem-session-experiments/components/form/options"
+                                name="createnode"
+                                type="checkbox">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <itemtrue
+                                        jcr:primaryType="nt:unstructured"
+                                        selected="false"
+                                        text="True"
+                                        value="true"/>
+                                </items>
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        behavior="newline"
+                                        offset="0"
+                                        width="5"/>
+                                </cq:responsive>
+                            </copynode>
+                            <load
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Run Test"
+                                sling:resourceType="aem-session-experiments/components/form/button"
+                                name="testButton"
+                                type="button"
+                                value="test">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="4"
+                                        width="2"/>
+                                </cq:responsive>
+                            </load>
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    behavior="newline"
+                                    offset="0"
+                                    width="6"/>
+                            </cq:responsive>
+                        </fieldscontainer>
+                        <sessioncontainer
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-session-experiments/components/container"
+                            id="session-component-container">
+                            <sessionwriter
+                                jcr:created="{Date}2020-06-23T08:42:44.765-04:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2020-06-23T08:43:39.703-04:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aem-session-experiments/components/sessionwriter"
+                                endpoint="/bin/experiments/sessionsaver.json"
+                                user="admin"
+                                pword="admin">
+                            </sessionwriter>
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="12"/>
+                            </cq:responsive>
+                        </sessioncontainer>
+                    </container>
+                    <results
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aem-session-experiments/components/container"
+                        id="session-results-container"
+                        layout="responsiveGrid">
+                        <separator
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-session-experiments/components/separator"/>
+                        <results
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Results"
+                            sling:resourceType="aem-session-experiments/components/form/text"
+                            name="results"
+                            readOnly="true"
+                            rows="20"
+                            type="textarea"
+                            value="Results of the test...">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    behavior="newline"
+                                    offset="0"
+                                    width="12"/>
+                            </cq:responsive>
+                        </results>
+                    </results>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,27 @@
+#session-main-container {
+  display: inline-flex;
+  width: 100%;
+}
+#session-main-container div.container.responsivegrid {
+  width: 100%;
+}
+#session-main-container div.aem-Grid-newComponent,
+#session-main-container div.newpar {
+  display: none;
+}
+#session-main-container #session-form-container input[type=number] {
+  width: 100px;
+  margin-left: 5px;
+}
+#session-main-container #session-form-container > div {
+  padding-bottom: 5px;
+}
+#session-main-container #session-form-container div.button {
+  margin-top: 35px;
+}
+
+#session-results-container textarea[name=results] {
+  width: 80%;
+}
+
+/*# sourceMappingURL=tester.css.map */

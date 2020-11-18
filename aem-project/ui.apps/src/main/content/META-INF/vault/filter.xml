@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
     <filter root="/apps/searchtester"/>
+    <filter root="/apps/aem-session-experiments"/>
+    <filter root="/apps/aem-session-experiments_blueprint"/>
 </workspaceFilter>

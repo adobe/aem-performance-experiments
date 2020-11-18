@@ -1,0 +1,35 @@
+
+#session-main-container {
+  display: inline-flex;
+  width: 100%;
+
+  div.container.responsivegrid {
+    width: 100%;
+  }
+
+  div.aem-Grid-newComponent,
+  div.newpar {
+    display: none;
+  }
+
+  #session-form-container {
+    input[type=number] {
+      width: 100px;
+      margin-left: 5px;
+    }
+
+    > div {
+      padding-bottom: 5px;
+    }
+
+    div.button {
+      margin-top: 35px;
+    }
+  }
+}
+
+#session-results-container {
+  textarea[name=results] {
+    width: 80%;
+  }
+}
