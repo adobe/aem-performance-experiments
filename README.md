@@ -65,7 +65,7 @@ experiment and determine for yourself.
 
 _Spoiler: Less is more!_
 
-[⇨ Performance Impact of Changing JCR Session Save Frequency](docs/tests/save-frequency)
+[⇨ Performance Impact of Changing JCR Session Save Frequency](experiments/session-save-frequency)
 
 ### Contributing
 
