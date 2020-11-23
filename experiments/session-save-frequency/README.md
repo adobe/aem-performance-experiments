@@ -163,4 +163,5 @@ We hope this experiment, and series of tests, helped you to understand the natur
 
 ## Recommended Reading
 
+- [Saving a Session within a Workflow](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html?lang=en#process-sessions)
 - [AEM transaction size or “do a save every 1000 nodes”](https://cqdump.wordpress.com/2017/08/30/aem-transaction-size-or-do-a-save-every-1000-nodes/)
